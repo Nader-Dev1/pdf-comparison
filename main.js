@@ -15,9 +15,9 @@ document.getElementById("comareBtn").addEventListener("click", async () => {
     formData.append("current", newFile);
   
     try {
-      const res = await fetch("http://localhost:5000/compare", {
-        method: "POST",
-        body: formData
+     const res = await fetch("https://pdf-comparison-seven.vercel.app/compare", {
+    method: "POST",
+    body: formData
       });
   
       const data = await res.json();
@@ -39,4 +39,5 @@ document.getElementById("comareBtn").addEventListener("click", async () => {
       resultsDiv.innerHTML = "❌ حدث خطأ أثناء المقارنة.";
     }
   });
+
   
